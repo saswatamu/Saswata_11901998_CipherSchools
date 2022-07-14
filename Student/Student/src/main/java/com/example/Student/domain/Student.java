@@ -1,0 +1,70 @@
+package com.example.Student.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+
+	@Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private long id;
+    private String studentname;
+    private String course;
+    private int fee;
+    private long registration;
+    private String college;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Student(Long id, String studentname, String course, int fee, long registration, String college) {
+		super();
+		this.id = id;
+		this.studentname = studentname;
+		this.course = course;
+		this.fee = fee;
+		this.registration= registration;
+		this.college=college;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getStudentname() {
+		return studentname;
+	}
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public int getFee() {
+		return fee;
+	}
+	public void setFee(int fee) {
+		this.fee = fee;
+	}
+	public long getRegistration() {
+		return registration;
+	}
+	public void setRegistration(long registration) {
+		this.registration = registration;
+	}
+	public String getCollege() {
+		return college;
+	}
+	public void setCollege(String college) {
+		this.college=college;
+	}
+    
+    
+}
